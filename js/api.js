@@ -2,16 +2,21 @@ const url = 'https://dog.ceo/api/breeds/image/random';
 messeges: [];
 
 
-async function fetchData() {
+async function fetchData($x) {
     try {
         const response = await fetch(url);
         const result = await response.json();
-        document.getElementById("myImg").src = result.message;
-        console.log(result);
+        document.querySelector($x).src = result.message;
+        // console.log(result);
     } catch (error) {
         console.error(error);
     }
 }
 
 // Call the asynchronous function
-fetchData();
+fetchData('#a');
+fetchData('#b');
+fetchData('#c');
+fetchData('#d');
+fetchData('#e');
+fetchData('#f');
