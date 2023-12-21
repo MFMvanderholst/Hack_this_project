@@ -1,0 +1,13 @@
+{
+  "name": "hack_this_project",
+  "version": "1.0.0",
+  "description": "Hackaton project api opdracht",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass -w scss:css",
+    "minify": "sass -w scss:css --style=compressed"
+  },
+  "author": "",
+  "license": "ISC"
+}
