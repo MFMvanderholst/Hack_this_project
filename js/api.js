@@ -3,7 +3,7 @@ async function fetchData($x) {
     try {
         const response = await fetch(dogUrl);
         const result = await response.json();
-        document.getElementById($x).src = result.message;
+        document.querySelector($x).src = result.message;
         // console.log(result);
     } catch (error) {
         console.error(error);
@@ -17,8 +17,6 @@ fetchData('#c');
 fetchData('#d');
 fetchData('#e');
 fetchData('#f');
-
-
 
 
 // url variable
