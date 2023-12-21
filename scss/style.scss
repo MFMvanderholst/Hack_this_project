@@ -1,7 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    color: rgba(0,0,0,1);
+    color: rgba(0, 255, 230, 0.5);
+    user-select: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+section.scroll-view, body {
+    background-color: rgba(0, 0, 0,1);
 }
 
 main {
@@ -15,9 +24,8 @@ section.scroll-view {
     overflow-x: auto;
     height: 11rem;
     width: 25rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem 1rem 1rem 1rem;
     margin: 2rem 0rem 1rem 0rem;
-    background-color: rgba(0, 255, 230,1);
     p, h3 {
             margin: 1rem 0rem 0rem 0rem;
         }
@@ -25,10 +33,79 @@ section.scroll-view {
 
 section.scroll-view {
     box-shadow: 0.1rem 0.1rem 1rem 0.1rem;
-    color: rgba(0,0,0,0.5);
     border-radius: 1rem;
+
+}
+
+section.scroll-view:hover, section.scroll-view:hover * {
+    color: rgba(0, 255, 230, 1);
+    cursor: default;
 }
 
 *::-webkit-scrollbar {
     background-color: transparent;
+}
+
+img {
+    width: 15em;
+    height: 15em;
+}
+
+div.overlay {
+    height: 20rem;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 1s;
+
+    .closebtn {
+        top: 1rem;
+        right: 2rem;
+        font-size: 3em;
+    }
+
+    a {
+        padding: 1rem;
+        font-size: 1em;
+        color: rgba(0, 170, 150,1);
+        display: block;
+        transition: 0.3s;
+
+    }
+    a:hover, a:focus {
+        color: rgba(0, 255, 230,1);
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+a.openbtn, a {
+    text-decoration: none;
+}
+
+a.openbtn, a.closebtn {
+    position: absolute;
+}
+
+a.openbtn {
+    top: 0rem;
+    left: 1rem;
+    font-size: 2rem;
+}
+
+section.images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50rem;
 }
