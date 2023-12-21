@@ -1,10 +1,7 @@
-const url = 'https://dog.ceo/api/breeds/image/random';
-messeges: [];
-
-
+const dogUrl = 'https://dog.ceo/api/breeds/image/random';
 async function fetchData($x) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(dogUrl);
         const result = await response.json();
         document.querySelector($x).src = result.message;
         // console.log(result);
